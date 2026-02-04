@@ -1,0 +1,528 @@
+{
+ "geoms": {
+ "geom1_point_scatter": {
+ "geom": "point",
+"classed": "geom1_point_scatter",
+"aes": {
+ "x": "x",
+"y": "y",
+"colour": "cluster",
+"showSelected1": "iteration",
+"showSelected2": "cluster" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        3,
+"showSelected": [ "iteration", "cluster" ],
+"help_showSelected": [ "iteration", "cluster" ] 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelected1": "integer",
+"showSelected2": "factor",
+"PANEL": "integer",
+"group": "character",
+"fill": "rgb" 
+},
+"chunk_order": [
+ "iteration" 
+],
+"nest_order": [
+ "showSelected2" 
+],
+"subset_order": [
+ "showSelected2" 
+],
+"columns": {
+ "common": [
+ "group",
+"x",
+"y" 
+] 
+},
+"chunks": {
+ "1": 1,
+"2": 2,
+"3": 3,
+"4": 4,
+"5": 5,
+"6": 6 
+},
+"total": 6 
+},
+"geom2_point_scatter": {
+ "geom": "point",
+"classed": "geom2_point_scatter",
+"aes": {
+ "x": "x",
+"y": "y",
+"showSelected1": "iteration" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"shape":       21,
+"size":        7,
+"fill": "#FFFFFF",
+"stroke":        2,
+"showSelected": "iteration",
+"help_showSelected": "iteration" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_line_objective": {
+ "geom": "line",
+"classed": "geom3_line_objective",
+"aes": {
+ "x": "iteration",
+"y": "value" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        1 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom4_tallrect_objective": {
+ "geom": "tallrect",
+"classed": "geom4_tallrect_objective",
+"aes": {
+ "xmin": "iteration - 0.5",
+"xmax": "iteration + 0.5",
+"clickSelects": "iteration" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.3,
+"clickSelects": "iteration",
+"help_clickSelects": "iteration" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+} 
+},
+"time": {
+ "variable": "iteration",
+"ms":     1500,
+"sequence": [ "1", "2", "3", "4", "5", "6" ] 
+},
+"selectors": {
+ "cluster": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "1", "2" ],
+"levels": [ "1", "2" ],
+"update": [
+ "geom1_point_scatter" 
+] 
+},
+"iteration": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "iteration",
+"clickSelects": true,
+"selected": "1",
+"levels": [ "1", "2", "3", "4", "5", "6" ],
+"update": [
+ "geom1_point_scatter",
+"geom2_point_scatter",
+"geom4_tallrect_objective" 
+] 
+} 
+},
+"plots": {
+ "scatter": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "cluster": {
+ "guide": "legend",
+"geoms": "point",
+"title": "cluster",
+"class": "cluster",
+"selector": "cluster",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pointcolour": "#00BFC4",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":      0.5,
+"label": "2" 
+},
+{
+ "pointcolour": "#F8766D",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":      0.5,
+"label": "1" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -2,
+       0,
+       2,
+       4 
+] 
+],
+"y": [
+ [
+       -2,
+       0,
+       2,
+       4 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -2,
+      -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+] 
+],
+"y": [
+ [
+       -2,
+      -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -2,
+       0,
+       2,
+       4 
+],
+"xlab": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"xrange": [ -2.595516, 5.782434 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -2,
+       0,
+       2,
+       4 
+],
+"ylab": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"yrange": [ -2.275476, 5.669095 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "x",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "y",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"ylabs": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom1_point_scatter",
+"geom2_point_scatter" 
+] 
+},
+"objective": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        2,
+       4,
+       6 
+] 
+],
+"y": [
+ [
+      169,
+     170,
+     171,
+     172 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+       2,
+       3,
+       4,
+       5,
+       6 
+] 
+],
+"y": [
+ [
+      169,
+   169.5,
+     170,
+   170.5,
+     171,
+   171.5,
+     172,
+   172.5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        2,
+       4,
+       6 
+],
+"xlab": [
+ "2",
+"4",
+"6" 
+],
+"xrange": [      0.2,      6.8 ],
+"xline": false,
+"xticks": true,
+"y": [
+      169,
+     170,
+     171,
+     172 
+],
+"ylab": [
+ "169",
+"170",
+"171",
+"172" 
+],
+"yrange": [ 168.6561, 172.7696 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "iteration",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "value",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "2",
+"4",
+"6" 
+],
+"ylabs": [
+ "169",
+"170",
+"171",
+"172" 
+],
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom3_line_objective",
+"geom4_tallrect_objective" 
+] 
+} 
+} 
+}
